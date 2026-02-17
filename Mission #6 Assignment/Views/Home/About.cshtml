@@ -1,18 +1,68 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "About Page";
 }
 
-<div>
-    <h1>About John Hilton</h1>
-    <p>Now you may be wondering, "Who is John Hilton?"</p>
-    <p>Well, your guess is as good as mine!</p>
-    <a href="https://www.qwcomedy.com/">Quick Wits Comedy</a>
-    <br />
-    <a href="https://baconsale.com/">Bacon Sale</a>
-    <br />
-    <a href="https://baconsale.com/">
-        <img src="~/img/baconsale.jpg" alt="bacon sale image" height="500"/>
-    </a>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="card shadow-lg">
+                <div class="card-header bg-primary text-white">
+                    <h1 class="mb-0">About Joel Hilton</h1>
+                </div>
+                <div class="card-body p-5">
+                    <p class="lead text-muted mb-4">
+                        Now you may be wondering, "Who is Joel Hilton?"
+                    </p>
+                    <p class="text-muted">
+                        Well, your guess is as good as mine! But here are some of his creative projects and ventures:
+                    </p>
+
+                    <div class="row mt-5">
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title fw-bold">Quick Wits Comedy</h5>
+                                    <p class="card-text text-muted">Check out Quick Wits Comedy for laughs and entertainment.</p>
+                                    <a href="https://www.qwcomedy.com/" class="btn btn-primary btn-sm" target="_blank">
+                                        <i class="bi bi-box-arrow-up-right"></i> Visit Website
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title fw-bold">Bacon Sale</h5>
+                                    <p class="card-text text-muted">Explore the Bacon Sale project and unique content.</p>
+                                    <a href="https://baconsale.com/" class="btn btn-primary btn-sm" target="_blank">
+                                        <i class="bi bi-box-arrow-up-right"></i> Visit Website
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-5">
+                        <h5 class="fw-bold mb-3">Featured Image</h5>
+                        <div class="text-center">
+                            <a href="https://baconsale.com/" target="_blank">
+                                <img src="~/img/baconsale.jpg" alt="Bacon Sale" class="img-fluid rounded shadow" style="max-width: 400px; height: auto;" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <hr class="my-5" />
+                    
+                    <div class="alert alert-info" role="alert">
+                        <h6 class="alert-heading">Movie Collection</h6>
+                        <p class="mb-0">
+                            This database is a comprehensive collection of movies managed through this application. 
+                            Feel free to <a href="@Url.Action("ListMovies", "Home")" class="alert-link">browse the collection</a> or 
+                            <a href="@Url.Action("Movies", "Home")" class="alert-link">add new movies</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

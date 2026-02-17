@@ -2,8 +2,37 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div>
-    <h1>The Joel Hilton Film Collection</h1>
-    <img src="~/img/joelhiltonheadshot.jpg" height="500"/>
-
+<div class="container mt-5">
+    <div class="row align-items-center">
+        <div class="col-lg-6 text-center mb-4 mb-lg-0">
+            <img src="~/img/joelhiltonheadshot.jpg" alt="Joel Hilton" class="img-fluid rounded-circle shadow" style="max-width: 350px; height: auto;" />
+        </div>
+        <div class="col-lg-6">
+            <div class="content-section">
+                <h1 class="display-4 fw-bold mb-4">The Joel Hilton Film Collection</h1>
+                <p class="lead text-muted mb-4">
+                    Welcome to a comprehensive database of movies from one of the world's finest film collections. 
+                    Browse, manage, and organize movies with ease.
+                </p>
+                <div class="d-grid gap-3 d-sm-flex">
+                    <a href="@Url.Action("ListMovies", "Home")" class="btn btn-primary btn-lg px-4">
+                        <i class="bi bi-collection-play"></i> View Movies
+                    </a>
+                    <a href="@Url.Action("Movies", "Home")" class="btn btn-outline-primary btn-lg px-4">
+                        <i class="bi bi-plus-circle"></i> Add Movie
+                    </a>
+                </div>
+                <hr class="my-4" />
+                <p class="text-muted">
+                    <strong>Features:</strong>
+                </p>
+                <ul class="text-muted">
+                    <li><i class="bi bi-check-circle text-success"></i> Organize by category</li>
+                    <li><i class="bi bi-check-circle text-success"></i> Track Plex copies</li>
+                    <li><i class="bi bi-check-circle text-success"></i> Manage lending history</li>
+                    <li><i class="bi bi-check-circle text-success"></i> Add custom notes</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
